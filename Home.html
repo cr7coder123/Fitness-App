@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>FITNESS APP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body style="background-color: cadetblue">
+    <!--Header-->
+    <header
+      style="
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: cadetblue;
+        height: 50px;
+      "
+    >
+      <text style="font-size: larger; color: white">FITNESS APP</text>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div style="display: flex;flex-direction: row;justify-content: center;flex: 1; background-color: skyblue;">
+      <a id="buttons" href="./index.html">
+        <text style="margin-top: 10px">HOME</text>
+        <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
+      </a>
+    </div>
+
+    <div id="results">
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>CHEST</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Chest" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>SHOULDERS</u></b>
+        <img style="width:250px; height:160px; margin:20px" id="Shoulders" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>BACK</u></b>
+        <img style="width:160px; height:200px; margin:20px" id="Back" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>ARMS</u></b>
+        <img style="width:190px; height:200px; margin:20px" id="Arms" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>CORE</u></b>
+        <img style="width:160px; height:200px; margin:20px" id="Core" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>GLUTES</u></b>
+        <img style="width:170px; height:220px; margin:20px" id="Glutes" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>HAMSTRINGS</u></b>
+        <img style="width:170px; height:220px; margin:20px" id="Hamstrings" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>QUADRICEPS</u></b>
+        <img style="width:160px; height:240px; margin:20px" id="Quadriceps" src=""/>
+      </a>
+      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
+        <b><u>CALVES</u></b>
+        <img style="width:120px; height:250px; margin:20px" id="Calves" src=""/>
+      </a>
+    </div>
+    
+
+    <script>
+      // Function to set images based on gender
+      function loadWorkoutImages() {
+        let gender = localStorage.getItem("gender"); // Retrieve gender selection
+
+        // Update image sources dynamically
+        document.getElementById("Chest").src = `./Images/${gender}Chest.png`;
+        document.getElementById("Shoulders").src = `./Images/${gender}Shoulders.png`;
+        document.getElementById("Back").src = `./Images/${gender}Back.png`;
+        document.getElementById("Arms").src = `./Images/${gender}Arms.png`;
+        document.getElementById("Core").src = `./Images/${gender}Core.png`;
+        document.getElementById("Glutes").src = `./Images/${gender}Glutes.png`;
+        document.getElementById("Hamstrings").src = `./Images/${gender}Hamstrings.png`;
+        document.getElementById("Quadriceps").src = `./Images/${gender}Quadriceps.png`;
+        document.getElementById("Calves").src = `./Images/${gender}Calves.png`;
+      }
+
+      // Run the function when the page loads
+      window.onload = loadWorkoutImages;
+    </script>
+  </body>
+</html>
