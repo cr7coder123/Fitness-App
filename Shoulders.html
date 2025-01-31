@@ -35,11 +35,11 @@
       </a>
     </div>
     <div style="display: flex;flex-direction: row;justify-content: center;flex: 1; background-color: skyblue;">
-      <a id="buttons" style="background-color:darkcyan;" href="./Chest.html">
+      <a id="buttons" href="./Chest.html">
         <text style="margin-top: 10px">CHEST</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
-      <a id="buttons" href="./Shoulders.html">
+      <a id="buttons" style="background-color:darkcyan;" href="./Shoulders.html">
         <text style="margin-top: 10px">SHOULDERS</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
@@ -77,43 +77,36 @@
       </a>
     </div>
 
-
-
     <div id="results">
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Pushup" src=""/>
-        <text>Keep your body in a straight line, lower yourself until your chest almost touches the floor, then push back up.</text>
+        <b><u>PIKE PUSH UPS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Pike" src=""/>
+        <text>Start in a downward dog position, lower your head toward the floor, then push back up to target the shoulders.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>INCLINE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Incline" src=""/>
-        <text>Place your hands on an elevated surface (like a table) and perform push-ups to target the lower chest.</text>
+        <b><u>DECLINE PIKE PUSH UPS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="DeclinePike" src=""/>
+        <text>Elevate your feet on a surface to increase difficulty and focus more on the shoulders.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>DECLINE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Decline" src=""/>
-        <text>Elevate your feet on a surface and do push-ups to emphasize the upper chest.</text>
+        <b><u>SHOULDER TAPS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="ShoulderTaps" src=""/>
+        <text>In a push-up position, lift one hand to tap the opposite shoulder, alternating sides to build stability and strength.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>WIDE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Wide" src=""/>
-        <text>Place your hands wider than shoulder-width to engage the outer chest more.</text>
+        <b><u>HANDSTAND HOLD</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Handstand" src=""/>
+        <text>Kick up against a wall and hold for as long as possible to build shoulder endurance and strength.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>DIAMOND PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Diamond" src=""/>
-        <text>Place your hands close together forming a diamond shape to target the inner chest and triceps.</text>
+        <b><u>ARM CIRCLES</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="ArmCircles" src=""/>
+        <text>Extend your arms and make small and large circles to warm up and strengthen the shoulders.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>ARCHER PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Archer" src=""/>
-        <text>Extend one arm out while lowering your chest toward the other arm to increase chest activation.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>CLAPPING PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Clap" src=""/>
-        <text>Start in a standard push-up position, lower your chest to the ground, then explosively push up so your hands leave the floor and clap before landing back in the starting position.</text>
+        <b><u>PULL UPS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="PullUps" src=""/>
+        <text>Grip a pull-up bar slightly wider than shoulder-width, pull yourself up until your chin clears the bar, then lower slowly.</text>
       </a>
     </div>
 
@@ -123,13 +116,12 @@
         let gender = localStorage.getItem("gender"); // Retrieve gender selection
 
         // Update image sources dynamically
-        document.getElementById("Pushup").src = `./Images/${gender}Pushup.png`;
-        document.getElementById("Incline").src = `./Images/${gender}Incline.png`;
-        document.getElementById("Decline").src = `./Images/${gender}Decline.png`;
-        document.getElementById("Wide").src = `./Images/${gender}Wide.png`;
-        document.getElementById("Diamond").src = `./Images/${gender}Diamond.png`;
-        document.getElementById("Archer").src = `./Images/${gender}Archer.png`;
-        document.getElementById("Clap").src = `./Images/${gender}Clap.png`;
+        document.getElementById("Pike").src = `./Images/${gender}Pike.png`;
+        document.getElementById("DeclinePike").src = `./Images/${gender}DeclinePike.png`;
+        document.getElementById("ShoulderTaps").src = `./Images/${gender}ShoulderTaps.png`;
+        document.getElementById("Handstand").src = `./Images/${gender}Handstand.png`;
+        document.getElementById("ArmCircles").src = `./Images/${gender}ArmCircles.png`;
+        document.getElementById("PullUps").src = `./Images/${gender}PullUps.png`;
       }
 
       // Run the function when the page loads

@@ -35,7 +35,7 @@
       </a>
     </div>
     <div style="display: flex;flex-direction: row;justify-content: center;flex: 1; background-color: skyblue;">
-      <a id="buttons" style="background-color:darkcyan;" href="./Chest.html">
+      <a id="buttons" href="./Chest.html">
         <text style="margin-top: 10px">CHEST</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
@@ -53,7 +53,7 @@
         <text style="margin-top: 10px">ARMS</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
-      <a id="buttons" href="./Core.html">
+      <a id="buttons" style="background-color:darkcyan;" href="./Core.html">
         <text style="margin-top: 10px">CORE</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
@@ -77,43 +77,31 @@
       </a>
     </div>
 
-
-
     <div id="results">
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Pushup" src=""/>
-        <text>Keep your body in a straight line, lower yourself until your chest almost touches the floor, then push back up.</text>
+        <b><u>CRUNCHES</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Crunches" src=""/>
+        <text>Lie on your back, knees bent, curl your upper body toward your knees, then lower slowly.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>INCLINE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Incline" src=""/>
-        <text>Place your hands on an elevated surface (like a table) and perform push-ups to target the lower chest.</text>
+        <b><u>LEG RAISES</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="LegRaises" src=""/>
+        <text>Lie on your back, legs straight, lift them to a 90-degree angle, then slowly lower without touching the floor.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>DECLINE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Decline" src=""/>
-        <text>Elevate your feet on a surface and do push-ups to emphasize the upper chest.</text>
+        <b><u>RUSSIAN TWISTS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Twists" src=""/>
+        <text>Sit on the floor, lean back slightly, rotate your torso side to side, tapping the floor each time.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>WIDE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Wide" src=""/>
-        <text>Place your hands wider than shoulder-width to engage the outer chest more.</text>
+        <b><u>PLANK</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Plank" src=""/>
+        <text>Hold a forearm or full plank position, keeping your body straight from head to heels.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>DIAMOND PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Diamond" src=""/>
-        <text>Place your hands close together forming a diamond shape to target the inner chest and triceps.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>ARCHER PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Archer" src=""/>
-        <text>Extend one arm out while lowering your chest toward the other arm to increase chest activation.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>CLAPPING PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Clap" src=""/>
-        <text>Start in a standard push-up position, lower your chest to the ground, then explosively push up so your hands leave the floor and clap before landing back in the starting position.</text>
+        <b><u>MOUNTAIN CLIMBERS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="Mountain" src=""/>
+        <text>In a plank position, drive one knee toward your chest, alternating quickly.</text>
       </a>
     </div>
 
@@ -123,13 +111,11 @@
         let gender = localStorage.getItem("gender"); // Retrieve gender selection
 
         // Update image sources dynamically
-        document.getElementById("Pushup").src = `./Images/${gender}Pushup.png`;
-        document.getElementById("Incline").src = `./Images/${gender}Incline.png`;
-        document.getElementById("Decline").src = `./Images/${gender}Decline.png`;
-        document.getElementById("Wide").src = `./Images/${gender}Wide.png`;
-        document.getElementById("Diamond").src = `./Images/${gender}Diamond.png`;
-        document.getElementById("Archer").src = `./Images/${gender}Archer.png`;
-        document.getElementById("Clap").src = `./Images/${gender}Clap.png`;
+        document.getElementById("Crunches").src = `./Images/${gender}Crunches.png`;
+        document.getElementById("LegRaises").src = `./Images/${gender}LegRaises.png`;
+        document.getElementById("Twists").src = `./Images/${gender}Twists.png`;
+        document.getElementById("Plank").src = `./Images/${gender}Plank.png`;
+        document.getElementById("Mountain").src = `./Images/${gender}Mountain.png`;
       }
 
       // Run the function when the page loads

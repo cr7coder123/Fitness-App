@@ -35,7 +35,7 @@
       </a>
     </div>
     <div style="display: flex;flex-direction: row;justify-content: center;flex: 1; background-color: skyblue;">
-      <a id="buttons" style="background-color:darkcyan;" href="./Chest.html">
+      <a id="buttons" href="./Chest.html">
         <text style="margin-top: 10px">CHEST</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
@@ -71,65 +71,31 @@
         <text style="margin-top: 10px">QUADRICEPS</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
-      <a id="buttons" href="./Calves.html">
+      <a id="buttons" style="background-color:darkcyan;" href="./Calves.html">
         <text style="margin-top: 10px">CAlVES</text>
         <i style="margin-bottom: 10px" class="fa-solid fa-dumbbell"></i>
       </a>
     </div>
 
-
-
     <div id="results">
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Pushup" src=""/>
-        <text>Keep your body in a straight line, lower yourself until your chest almost touches the floor, then push back up.</text>
+        <b><u>CALF RAISES</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="CalfRaises" src=""/>
+        <text>Stand with feet shoulder-width apart, rise onto the balls of your feet, then lower slowly back down.</text>
       </a>
       <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>INCLINE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Incline" src=""/>
-        <text>Place your hands on an elevated surface (like a table) and perform push-ups to target the lower chest.</text>
+        <b><u>BOX JUMPS</u></b>
+        <img style="width:200px; height:150px; margin:20px" id="BoxJumps" src=""/>
+        <text>Jump onto a raised surface (like a bench or chair) and land softly on the balls of your feet, using your calves to absorb the landing.</text>
       </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>DECLINE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Decline" src=""/>
-        <text>Elevate your feet on a surface and do push-ups to emphasize the upper chest.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>WIDE PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Wide" src=""/>
-        <text>Place your hands wider than shoulder-width to engage the outer chest more.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>DIAMOND PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Diamond" src=""/>
-        <text>Place your hands close together forming a diamond shape to target the inner chest and triceps.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>ARCHER PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Archer" src=""/>
-        <text>Extend one arm out while lowering your chest toward the other arm to increase chest activation.</text>
-      </a>
-      <a style="display: flex; flex-direction: column; width:80%; align-items: center;justify-content: center; align-self: center; background-color: cadetblue; padding:20px; text-align: center; text-decoration: none; color:white; border-radius: 50px; margin:20px" href="./Chest.html">
-        <b><u>CLAPPING PUSH UPS</u></b>
-        <img style="width:200px; height:150px; margin:20px" id="Clap" src=""/>
-        <text>Start in a standard push-up position, lower your chest to the ground, then explosively push up so your hands leave the floor and clap before landing back in the starting position.</text>
-      </a>
-    </div>
-
     <script>
       // Function to set images based on gender
       function loadWorkoutImages() {
         let gender = localStorage.getItem("gender"); // Retrieve gender selection
 
         // Update image sources dynamically
-        document.getElementById("Pushup").src = `./Images/${gender}Pushup.png`;
-        document.getElementById("Incline").src = `./Images/${gender}Incline.png`;
-        document.getElementById("Decline").src = `./Images/${gender}Decline.png`;
-        document.getElementById("Wide").src = `./Images/${gender}Wide.png`;
-        document.getElementById("Diamond").src = `./Images/${gender}Diamond.png`;
-        document.getElementById("Archer").src = `./Images/${gender}Archer.png`;
-        document.getElementById("Clap").src = `./Images/${gender}Clap.png`;
+        document.getElementById("CalfRaises").src = `./Images/${gender}CalfRaises.png`;
+        document.getElementById("BoxJumps").src = `./Images/${gender}BoxJumps.png`;
       }
 
       // Run the function when the page loads
